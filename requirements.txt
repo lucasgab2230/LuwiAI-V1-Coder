@@ -10,7 +10,7 @@ tokenizers>=0.13.3
 # === ONNX & Quantization ===
 onnx>=1.14.0
 onnxruntime>=1.16.0
-onnxruntime-tools>=1.11.0
+onnxruntime-tools>=1.7.0,<2.0.0
 
 # === Utilities ===
 numpy>=1.23.0
