@@ -1,0 +1,21 @@
+# slm-codegen/.github/dependabot.yml
+
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/" # Location of requirements.txt
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "github-actions"
+    directory: "/" # Root directory of the project
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5

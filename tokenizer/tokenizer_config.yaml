@@ -1,0 +1,28 @@
+# slm-codegen/tokenizer/tokenizer_config.yaml
+
+# Corpus size sampling
+input_sentence_size: 1000000 # Limit to 1M lines for training the tokenizer
+shuffle_input_sentence: true
+
+# Vocabulary settings
+vocab_size: 16000 # Small but rich enough for code syntax
+character_coverage: 1.0 # Keep full Unicode range for codepoints
+
+# Model type
+model_type: bpe # BPE recommended for mixed text/code inputs
+normalization_rule_name: nfkc # Normalize full-width characters
+
+# Tokenization behavior
+split_by_whitespace: true
+remove_extra_whitespaces: true
+treat_whitespace_as_suffix: true # Helps preserve indentation
+
+# Special tokens
+pad_id: 0
+unk_id: 1
+bos_id: 2
+eos_id: 3
+
+# Training behavior
+train_extremely_large_corpus: false
+hard_vocab_limit: true

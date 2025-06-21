@@ -1,0 +1,44 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    name: Run tests and linter
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: 🧪 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: 🔧 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .  # Optional if using setup.py or pyproject.toml
+
+      - name: ✅ Run linter
+        run: flake8 utils/ model/ inference/ tokenizer/ --max-line-length=100
+
+      - name: 🧪 Run tests
+        run: |
+          python -m unittest discover -s tests -p "test_*.py"
+
+  # Optional: Deployment stub
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: 🪄 Placeholder deployment step
+        run: echo "⚠️ Add deployment logic here (e.g. upload ONNX to Hugging Face or server)"

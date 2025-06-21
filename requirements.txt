@@ -1,0 +1,20 @@
+# === Core Frameworks ===
+torch>=1.13.0
+transformers>=4.33.0
+datasets>=2.10.1
+
+# === Tokenizer ===
+sentencepiece>=0.1.99
+tokenizers>=0.13.3
+
+# === ONNX & Quantization ===
+onnx>=1.14.0
+onnxruntime>=1.16.0
+onnxruntime-tools>=1.11.0
+
+# === Utilities ===
+numpy>=1.23.0
+tqdm>=4.65.0
+
+# === Optional: Syntax/Lint Evaluation ===
+flake8>=6.1.0

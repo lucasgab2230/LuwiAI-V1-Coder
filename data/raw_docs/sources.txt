@@ -1,0 +1,8 @@
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://developer.mozilla.org/en-US/docs/Web/CSS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://react.dev/reference/react
+https://www.typescriptlang.org/docs/
+https://git-scm.com/docs
+https://docs.python.org/3.12/reference/index.html
+https://docs.djangoproject.com/en/5.2/
