@@ -2,8 +2,7 @@
 
 import numpy as np
 from inference.run_onnx import load_session, prepare_input, run_inference, sample_next_token
-from tokenizer.spm_decode import decode_ids  # You must implement this if not done yet
-from sentencepiece import SentencePieceProcessor
+from sentencepiece import *
 
 MODEL_PATH = "model/slm_ivybridge_int8.onnx"
 TOKENIZER_PATH = "tokenizer/slm_tokenizer.model"

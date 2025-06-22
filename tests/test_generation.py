@@ -9,7 +9,7 @@ import os
 # Ensure the model directory is importable
 sys.path.insert(0, os.path.abspath("model"))
 
-from architecture import SmallCodeGenModel
+from model.architecture import SmallCodeGenModel
 
 class TestSmallCodeGenModel(unittest.TestCase):
     @classmethod
