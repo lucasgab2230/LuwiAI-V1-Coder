@@ -123,6 +123,25 @@ PyTorch, HuggingFace Datasets, ONNX Runtime, SentencePiece
 
 ---
 
+💬 Chat with Your Model
+
+You can now interact with your trained model in a conversational way using a simple command-line interface:
+
+```bash
+python chat/chat_cli.py
+```
+
+Type a prompt like:
+`Prompt > create a python function to validate email addresses`
+
+And receive generated code directly from your quantized ONNX model!
+
+`> To exit the chat loop, type exit or quit.`
+
+Make sure your tokenizer model (tokenizer/slm_tokenizer.model) and quantized ONNX model (model/slm_ivybridge_int8.onnx) are built before starting the chat.
+
+---
+
 📜 License
 
 MIT License
