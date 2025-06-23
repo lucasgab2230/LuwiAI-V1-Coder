@@ -17,7 +17,7 @@ numpy>=1.23.0
 tqdm>=4.65.0
 
 # === Optional: Syntax/Lint Evaluation ===
-flake8==6.1.0
+flake8==7.3.0
 
 # === Setup ===
 setuptools>=42
